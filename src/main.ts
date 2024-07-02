@@ -16,7 +16,7 @@ console.log({ UserStore });
 
 const params = new URLSearchParams(document.location.search.slice(1));
 
-const webSceneId = params.get("webscene") || "48f9ffa636c84286a6206dcca59d9d70";
+const webSceneId = params.get("webscene") || "5bc5aaa31c284830afd90ae51b38686e";
 
 const map = new WebScene({
   portalItem: {
@@ -145,4 +145,20 @@ view.when(async () => {
       }
     }
   });
+
+  const slides = map.presentation.slides;
+
+  window.onkeydown = (e: KeyboardEvent) => {
+    const index = Number.parseInt(e.key);
+
+    if (0 < index && index <= slides.length) {
+      const slide = slides.getItemAt(index - 1);
+
+      slide.applyTo(view);
+
+      // this.view.goTo(slide.viewpoint, {
+      //   speedFactor: 0.2
+      // });
+    }
+  };
 });
