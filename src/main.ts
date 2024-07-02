@@ -78,11 +78,9 @@ const mesh = Mesh.fromJSON({
   },
   transform: {
     translation: [0, 0, 0],
-    rotationAxis: [
-      1.751021677256581e-8, 2.980232238769552e-8, 0.9999999999999993,
-    ],
+    rotationAxis: [0, 0, 1],
     rotationAngle: 250,
-    scale: [1.5, 1.5, 1.5],
+    scale: [11 / 6, 1.5, 1.5],
     // scale: [0.4773428993661809, 0.4773428993661765, 0.4773428993661756]
   },
   vertexAttributes: {
