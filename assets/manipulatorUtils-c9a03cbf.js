@@ -1,0 +1,1 @@
+import{fD as a,bj as l}from"./index-cc5260cc.js";function i(n,e){return u(n?.data.coordinateHelper.hasZ(),e)}function u(n,e){return!!n&&e.mode!=="on-the-ground"&&!a(e)}function s(n,e){let r=null;const o=n.events.on("grab-changed",t=>{r!=null&&(r.remove(),r=null),t.action==="start"&&(r=n.disableDisplay()),e&&e(t)});return l(()=>{r?.remove(),o.remove()})}export{i as o,s as r};
